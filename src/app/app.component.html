@@ -1,0 +1,31 @@
+Hello {{ title | uppercase | lowercase }}
+<p>{{ amount | currency}}</p>
+<!-- <app-todo-list></app-todo-list> -->
+<pre>
+{{ today | date:'yyyy-MM-dd' }}
+</pre>
+<!-- diractive -->
+<!-- build in function -->
+<pre>{{ user | json }}</pre>
+<div *ngIf="isLoading">
+  Loading...
+</div>
+
+<!-- <input #email (keyup.enter)="search(email.value)"> -->
+<input [(ngModel)]="email">
+{{ email }}
+
+<button (click)="onClickOkButton($event)">
+  OK
+</button>
+<p [style.color]="isActive ? 'green' : 'red'">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+   Delectus eos iusto doloremque ipsa, assumenda architecto numquam sequi ratione dolore,
+    veritatis odit atque fuga sed, cupiditate vitae eligendi. Repudiandae, inventore nobis!
+</p>
+
+<!-- property binding -->
+<img
+[class.active] ="isActive"
+[src]="imageUrl">
+
